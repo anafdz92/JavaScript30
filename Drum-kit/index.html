@@ -70,9 +70,9 @@
       function removeTransition(ev) {
         console.log(ev);
         if (ev.propertyName !== "transform") {
-          return;
+          return; //para que pare el bucle
         }
-        this.classList.remove("playing");
+        this.classList.remove("playing"); //this equivale a key
       }
       keys.forEach((key) =>
         key.addEventListener("transitionend", removeTransition)
